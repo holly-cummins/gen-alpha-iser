@@ -1,0 +1,4 @@
+#! /bin/sh
+
+rm src/main/java/org/acme/Filter.java
+
