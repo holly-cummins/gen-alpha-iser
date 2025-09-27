@@ -8,7 +8,7 @@ public class Translator {
     public static String translate(String phrase) {
         if (phrase != null) {
             phrase = phrase.toLowerCase();
-            phrase = phrase.replaceAll("hello", "dab me up");
+            phrase = phrase.replaceAll("hello", hello());
             phrase = phrase.replaceAll("doomed", "cooked");
             phrase = phrase.replaceAll("good", "sigma");
 
@@ -35,6 +35,14 @@ public class Translator {
         }
 
         return phrase;
+    }
+
+    private static String hello() {
+        if (random.nextBoolean()) {
+            return "dab me up";
+        } else {
+            return "what's up";
+        }
     }
 
     public static String toSentenceCase(String input) {
