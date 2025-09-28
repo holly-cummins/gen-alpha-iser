@@ -23,7 +23,7 @@ public class Translator {
             maybePrepend(phrase, "zang! ");
 
             if (random.nextBoolean()) {
-                phrase.append(" this demo is dog water. ");
+                phrase.append(" this demo is dog water.");
             }
 
             toSentenceCase(phrase);
