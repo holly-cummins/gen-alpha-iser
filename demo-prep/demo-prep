@@ -4,5 +4,3 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 git apply $SCRIPT_DIR/demo-prep.patch
 
 idea $SCRIPT_DIR/..
-
-curl localhost:11434 || ollama serve &

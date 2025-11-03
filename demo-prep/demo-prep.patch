@@ -1,26 +1,23 @@
-Subject: [PATCH] Remove filter
+Subject: [PATCH] Demo prep scripts
 ---
 Index: src/main/java/org/acme/Filter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
 ===================================================================
 diff --git a/src/main/java/org/acme/Filter.java b/src/main/java/org/acme/Filter.java
-deleted file mode 100644
---- a/src/main/java/org/acme/Filter.java	(revision bcb853c0d869ac7f60f21be5d55d7134dc0e0938)
-+++ /dev/null	(revision bcb853c0d869ac7f60f21be5d55d7134dc0e0938)
-@@ -1,16 +0,0 @@
--package org.acme;
--
--import jakarta.ws.rs.container.ContainerResponseContext;
+--- a/src/main/java/org/acme/Filter.java	(revision fea8434dfcf1e87d596efebac5e366381ed7efc0)
++++ b/src/main/java/org/acme/Filter.java	(date 1762205692210)
+@@ -1,12 +1,10 @@
+ package org.acme;
+ 
+ import jakarta.ws.rs.container.ContainerResponseContext;
 -import org.jboss.resteasy.reactive.server.ServerResponseFilter;
--
--import static org.acme.support.Translator.translate;
--
--public class Filter {
+ 
+ import static org.acme.support.Translator.translate;
+ 
+ public class Filter {
 -    @ServerResponseFilter
--    public void getFilter(ContainerResponseContext responseContext) {
--        Object entity = responseContext.getEntity();
--        if (entity instanceof String) {
--            responseContext.setEntity(translate((String) entity));
--        }
--    }
--}
-\ No newline at end of file
+     public void getFilter(ContainerResponseContext responseContext) {
+         Object entity = responseContext.getEntity();
+         if (entity instanceof String) {
