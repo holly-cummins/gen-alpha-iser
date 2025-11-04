@@ -25,8 +25,8 @@ public class Filter {
     @ServerResponseFilter
     public void getFilter(ContainerResponseContext responseContext) {
         Object entity = responseContext.getEntity();
-        if (entity instanceof String) {
-            responseContext.setEntity(translate((String) entity));
+        if (entity instanceof String s) {
+            responseContext.setEntity(translate(s));
         }
     }
 }

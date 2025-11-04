@@ -1,4 +1,4 @@
-Subject: [PATCH] Demo prep scripts
+Subject: [PATCH] Demo prep
 ---
 Index: src/main/java/org/acme/Filter.java
 IDEA additional info:
@@ -6,8 +6,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/src/main/java/org/acme/Filter.java b/src/main/java/org/acme/Filter.java
---- a/src/main/java/org/acme/Filter.java	(revision fea8434dfcf1e87d596efebac5e366381ed7efc0)
-+++ b/src/main/java/org/acme/Filter.java	(date 1762205692210)
+--- a/src/main/java/org/acme/Filter.java	(revision cfe55b9c809dd56d14da9c079acc1dda82d510b8)
++++ b/src/main/java/org/acme/Filter.java	(date 1762260188468)
 @@ -1,12 +1,10 @@
  package org.acme;
  
@@ -20,4 +20,4 @@ diff --git a/src/main/java/org/acme/Filter.java b/src/main/java/org/acme/Filter.
 -    @ServerResponseFilter
      public void getFilter(ContainerResponseContext responseContext) {
          Object entity = responseContext.getEntity();
-         if (entity instanceof String) {
+         if (entity instanceof String s) {
