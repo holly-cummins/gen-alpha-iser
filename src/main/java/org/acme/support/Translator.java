@@ -6,7 +6,7 @@ public class Translator {
     private static final Random random = new Random();
 
     public static String translate(String originalPhrase) {
-        if (originalPhrase != null) {
+        if (originalPhrase!=null) {
             StringBuilder phrase = new StringBuilder(originalPhrase.toLowerCase());
 
             replace(phrase, "hello", hello());
@@ -18,6 +18,8 @@ public class Translator {
             maybeAppend(phrase, "ballerina cappuccina");
             maybeAppend(phrase, "chimpanzini bananini");
             maybeAppend(phrase, "\uD83D\uDC80");
+            maybeAppend(phrase, "six seven, ");
+            maybeAppend(phrase, "6-7, ");
             maybeAppend(phrase, "chicken jockey");
 
             maybePrepend(phrase, "zang! ");
@@ -80,7 +82,7 @@ public class Translator {
             }
 
             // After punctuation that ends a sentence, set flag to true
-            if (c == '.' || c == '!' || c == '?') {
+            if (c=='.' || c=='!' || c=='?') {
                 capitalizeNext = true;
             }
         }
