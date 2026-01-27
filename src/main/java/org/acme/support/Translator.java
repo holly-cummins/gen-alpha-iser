@@ -15,11 +15,11 @@ public class Translator {
             replace(phrase, "great", "goated");
 
             maybeAppend(phrase, "skibidi");
+            maybeAppend(phrase, "six seven");
             maybeAppend(phrase, "ballerina cappuccina");
             maybeAppend(phrase, "chimpanzini bananini");
             maybeAppend(phrase, "\uD83D\uDC80");
-            maybeAppend(phrase, "six seven, ");
-            maybeAppend(phrase, "6-7, ");
+            maybeAppend(phrase, "6-7");
             maybeAppend(phrase, "chicken jockey");
 
             maybePrepend(phrase, "zang! ");
