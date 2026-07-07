@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-git apply $SCRIPT_DIR/demo-prep.patch
+
+(
+# patches need to be in the right directory for the paths
+  cd $SCRIPT_DIR/../
+  cp $SCRIPT_DIR/demo-prep.patch .
+  git apply demo-prep.patch
+  rm demo-prep.patch
+)
 
 idea $SCRIPT_DIR/..
